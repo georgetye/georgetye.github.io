@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+html{
+	overflow-y: hidden;
+}
+
+html, body {
+	margin:0;
+	padding:0;
+}
+
+div#purpleBar{
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(98, 40, 146);
+}
+
+div#grayHelm{
+    left: 0px;
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(77, 76, 77);
+    /*font properties*/
+    color: #fff;
+	font-family: "Times New Roman";
+}
+
+div#testStatus{
+	display: inline-block;
+	position: relative;
+	top: -15%;
+	width: 10%;
+	margin-left: 2vh;
+	font-size: 16px;
+}
+
+div#name{
+	display: inline-block;
+	margin-left: 19%;
+	margin-top: 0.2%;
+	width: 40%;
+	text-align: center;
+	font-size: 18px;
+}
+
+span#mcat{
+	font-size: 16px;
+}
+
+div#passage{
+	float: left;
+	padding: 1%;
+	width: 48%;
+	height: 75vh;
+	overflow-y: auto;
+}
+
+div#passage p {
+    text-indent: 4vh;
+    line-height: 1.25;
+    font-size: 16px;
+}
+
+div#figure{
+	text-align: center;
+	width: 100%;
+}
+
+div#table{
+	text-align: center;
+	width: 100%;
+	margin-bottom: 2vh;
+}
+
+span#figure {
+	margin-left: 5vh;
+	display: inline-block;
+	margin-bottom: 2vh;
+}
+
+div#passageNumber{
+	text-indent: 0px;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 5vh;
+}
+
+div#questionBar{
+	background-color: rgb(77, 76, 77);
+	 /*font properties*/
+    color: #fff;
+	font-family: "Times New Roman";
+	font-size: 18px;
+	padding: 0.5% 1%;
+}
+
+div#test{
+	float: right;
+	padding: 1%;
+	width: 48%;
+}
+
+div#grayBottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 7.5vh;
+    background-color: #4d4c4d;
+
+}
+
+div#grayBottom div{
+	display: inline-block;
+	margin-left: 7.4%;
+	margin-right: 7.4%;
+	margin-top:0.6%;
+}
+
+div#grayBottom div#previous{
+	margin-left: 8.5%;
+}
+
+</style>
+
+<script>
+var position = 0, test, test_status, question, choice, choices, chA, chB, chC, chD, correct=0;
+var questions = [
+	[
+	/*Question*/
+	"Why did Dr. Sterling use a tone to indicate the line of the row he wanted participants to recite?", 
+	/*A*/
+	"Asking verbally would take longer than iconic memory lasts",
+	/*B*/
+	"Dr. Sperling intended to study the connection between audio and visual cues", 
+	/*C*/
+	"It was the clearest way to signal the question to multiple participants",  
+	/*D*/
+	"Using an audible cue helped trigger echoic memory", 
+	/*Answer*/
+	"A"],
+	[
+	/*Question*/
+	"Which is the best test of echoic memory?", 
+	/*A*/
+	"Asking participants to provide the next line in a well-known song",
+	/*B*/
+	"Asking participants to summarize a story that was read to them", 
+	/*C*/
+	"Asking participants to identify whether two tones are identical",  
+	/*D*/
+	"Asking participants to sing the first line of their favorite song", 
+	/*Answer*/
+	"C"],
+	[
+	/*Question*/
+	"Which of the following explains why we see movement in a flip-book or stop-motion animation?", 
+	/*A*/
+	"Iconic memory",
+	/*B*/
+	"Central executive", 
+	/*C*/
+	"Echoic memory",  
+	/*D*/
+	"Visuospatial sketchpad", 
+	/*Answer*/
+	"A"],
+	[
+	/*Question*/
+	"If you drive by a stop sign and then try to recall it several minutes later, which are you using?", 
+	/*A*/
+	"Echoic memory, then the phonological loop",
+	/*B*/
+	"Echoic memory, then the visuospatial sketchpad", 
+	/*C*/
+	"Iconic memory, then the visuospatial sketchpad",  
+	/*D*/
+	"Iconic memory, then the phonological loop", 
+	/*Answer*/
+	"D"],
+	[
+	/*Question*/
+	"Which of the following is a technique used to increase the amount of information stored in working memory?", 
+	/*A*/
+	"Semantic Networking",
+	/*B*/
+	"Imagery", 
+	/*C*/
+	"Self-referencing",  
+	/*D*/
+	"Chunking", 
+	/*Answer*/
+	"D"]
+];
+
+/*
+var passages = [
+"Passage 1",
+"In 1960, Dr. George Sperling asked participants to recall a 4x3 group of letters flashed on a screen for less than a second. When instructed to recall as many letters as possible, most participants could only name the first four or five letters. <br>
+
+Dr. Sperling then asked another group to name only one of the rows. After they saw the image flash, he would randomly sound one of three tones. Sounding a high-frequency tone indicated that the participant should give the first line of letters; a medium-frequency tone indicated the middle row; and a low-frequency tone asked for the last row. If the tone was broadcast immediately after the image was flashed, the majority of subjects recalled all four letters. This marked the discovery of iconic memory, the visual form of sensory memory. Audible sensory memory (also known as echoic memory) lasts for several seconds. <br>
+
+.PassageImage
+
+Sensory memory is constantly processing enormous amounts of information from the world around you. What you pay attention to gets passed into working memory. This stage can be described in three major sections – the visuospatial sketchpad, the phonological loop, and the central executive. The sketchpad stores visual information, like a photograph, while the loop deals with words and numbers. The job of coordinating the two falls to the central executive – connecting an address you hear with a map that you see, for example. <br>"
+];*/
+
+function _(x) {
+	return document.getElementById(x);
+}
+
+function renderQuestion(){
+	prompt = _("prompt");
+	if(position >= questions.length) {
+		prompt.innerHTML = "<h2>You got "+correct+" of " +questions.length+" questions correct</h2>";
+		position = 0;
+		correct = 0;
+		return false
+	}
+	_("testStatus").innerHTML = "Question " + (position+1)+" of "+questions.length;
+	question = questions[position][0];
+	_("questionBar").innerHTML = "Question " + (position+1);
+	chA = questions[position][1];
+	chB = questions[position][2];
+	chC = questions[position][3];
+	chD = questions[position][4];
+	prompt.innerHTML = "<br>" + question +"<br><br>";
+	prompt.innerHTML += "<input type='radio' name='choices' value='A'><b>A.</b> "+chA+"<br>";
+	prompt.innerHTML += "<input type='radio' name='choices' value='B'><b>B.</b> "+chB+"<br>";
+	prompt.innerHTML += "<input type='radio' name='choices' value='C'><b>C.</b> "+chC+"<br>";
+	prompt.innerHTML += "<input type='radio' name='choices' value='D'><b>D.</b> "+chD+"<br>";
+	prompt.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
+
+function checkAnswer() {
+	choices = document.getElementsByName("choices");
+	for(var i=0; i<choices.length; i++) {
+		if(choices[i].checked){
+			choice = choices[i].value;
+		}
+	}
+	if(choice == questions[position][5]) {
+		correct++;
+	}
+	position++;
+	renderQuestion();
+}
+
+/*Goes to the previous question
+Corresponds to the previous button in the bottom left.*/
+function previous() {
+	position--;
+	renderQuestion();
+}
+
+/*Goes to the next question
+Corresponds to the next button in the bottom right.*/
+function next() {
+	position++;
+	renderQuestion();
+}
+
+window.addEventListener("load", renderQuestion, false);
+</script>
+</head>
+<body>
+
+<div id ="purpleBar"></div>
+<div id ="grayHelm"><div id="testStatus"></div><div id="name">George Tye<br><span id="mcat">MEDICAL COLLEGE ADMISSION TEST</span></div></div>
+
+<div id="passage">
+<div id="passageNumber">Passage 1 (Questions 1-5)</div>
+<p>In 1960, Dr. George Sperling asked participants to recall a 4x3 group of letters flashed on a screen for less than a second. When instructed to recall as many letters as possible, most participants could only name the first four or five letters.</p>
+
+<p>Dr. Sperling then asked another group to name only one of the rows. After they saw the image flash, he would randomly sound one of three tones. Sounding a high-frequency tone indicated that the participant should give the first line of letters; a medium-frequency tone indicated the middle row; and a low-frequency tone asked for the last row. If the tone was broadcast immediately after the image was flashed, the majority of subjects recalled all four letters. This marked the discovery of iconic memory, the visual form of sensory memory. Audible sensory memory (also known as echoic memory) lasts for several seconds.</p>
+
+<div id="figure">
+<img src="https://ka-perseus-images.s3.amazonaws.com/a7d4238a28e6eef5321d3f6278fb17ce5a9461cf.png"></div>
+<b>Figure 1</b><span id="figure">Experimental setup for Dr. Sperling</span>
+
+<p>Sensory memory is constantly processing enormous amounts of information from the world around you. What you pay attention to gets passed into working memory. This stage can be described in three major sections – the visuospatial sketchpad, the phonological loop, and the central executive. The sketchpad stores visual information, like a photograph, while the loop deals with words and numbers. The job of coordinating the two falls to the central executive – connecting an address you hear with a map that you see, for example.</div></p>
+<div id="test"><div id="questionBar"></div><div id="prompt"></div></div>
+<div id="grayBottom">
+<div id="previous"><img onClick="previous()" src="file:///home/george/MCAT%20Coding/previous.gif"></div>
+<div id="mark"><img src="file:///home/george/MCAT%20Coding/mark.gif"></div>
+<div id="review"><img src="file:///home/george/MCAT%20Coding/review.gif"></div>
+<div id="next"><img onClick="next()" src="file:///home/george/MCAT%20Coding/next.gif"></div>
+</div>
+</body>
+</html>

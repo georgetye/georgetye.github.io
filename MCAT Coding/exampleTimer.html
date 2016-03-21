@@ -1,0 +1,21 @@
+<script type="text/javascript">
+function countDown(seconds, myElement) {
+	var minutesLeft = Math.floor(seconds/60);
+	var secondsLeft = (seconds%60).toFixed(2);
+	var element = document.getElementById(myElement);
+	element.innerHTML = minutesLeft + ':' + secondsLeft;
+	if(seconds < 1) {
+		clearTimeout(refresh);
+		element.innerHTML = '<h2>Countdown Complete!</h2>';
+		element.innerHTML += '<a href="#">Click here now</a>';
+	}
+	seconds--;
+	var refresh = setTimeout('countDown('+seconds+',"'+element+'")',1000);
+}
+</script>
+
+<div id="timer"></div>
+
+<script type="text/javascript">countDown(120,"timer");</script>
+
+hi

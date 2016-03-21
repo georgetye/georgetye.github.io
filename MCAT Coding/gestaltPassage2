@@ -1,0 +1,137 @@
+<style>
+html{
+	overflow-y: hidden;
+}
+
+html, body {
+	margin:0;
+	padding:0;
+}
+
+div#purpleBar{
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(98, 40, 146);
+}
+
+div#grayHelm{
+    left: 0px;
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(77, 76, 77);
+    /*font properties*/
+    color: #fff;
+	font-family: "Times New Roman";
+}
+
+div#testStatus{
+	display: inline-block;
+	position: relative;
+	top: -15%;
+	width: 10%;
+	margin-left: 2vh;
+	font-size: 16px;
+}
+
+div#name{
+	display: inline-block;
+	margin-left: 19%;
+	margin-top: 0.2%;
+	width: 40%;
+	text-align: center;
+	font-size: 18px;
+}
+
+span#mcat{
+	font-size: 16px;
+}
+
+div#passage{
+	float: left;
+	padding: 1%;
+	width: 48%;
+	height: 75vh;
+	overflow-y: auto;
+}
+
+div#passage p {
+    text-indent: 4vh;
+    line-height: 1.25;
+    font-size: 16px;
+}
+
+div#figure{
+	text-align: center;
+	width: 100%;
+}
+
+div#table{
+	text-align: center;
+	width: 100%;
+	margin-bottom: 2vh;
+}
+
+span#figure {
+	margin-left: 5vh;
+	display: inline-block;
+	margin-bottom: 2vh;
+}
+
+div#passageNumber{
+	text-indent: 0px;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 5vh;
+}
+
+div#questionBar{
+	background-color: rgb(77, 76, 77);
+	 /*font properties*/
+    color: #fff;
+	font-family: "Times New Roman";
+	font-size: 18px;
+	padding: 0.5% 1%;
+}
+
+div#test{
+	float: right;
+	padding: 1%;
+	width: 48%;
+}
+
+div#grayBottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 7.5vh;
+    background-color: #4d4c4d;
+
+}
+
+div#grayBottom div{
+	display: inline-block;
+	margin-left: 7.4%;
+	margin-right: 7.4%;
+	margin-top:0.6%;
+}
+
+div#grayBottom div#previous{
+	margin-left: 8.5%;
+}
+
+</style>
+
+
+<div id="passage">
+<div id="passageNumber">Passage 2 (Questions 6-10)</div>
+<p>Our ability to perceive the world around us is based on the fact that we are constantly making inferences about the various stimuli that we are exposed to. These inferences allow us to notice meaningful patterns and pay attention to novel stimuli in order to enhance our mental representations of the world. Gestalt psychology is one school of thought that seeks to understand perceptual organization, and operates from the viewpoint that human beings perceive phenomenon as whole, grouped parts, rather than perceiving individual features. Gestalt theory, when applied to perceptions of physical facial attractiveness, would suggest that ratings of the attractiveness of a person’s face would be based on an evaluation of the grouped, collective features of the whole face, rather than on distinct evaluations of specific parts of their face (like their nose shape, eye color, or lips). From this perspective a person with symmetrical facial traits might be evaluated as more attractive than someone with asymmetrical traits, because their face, when evaluated as a whole, appears to be more proportional and similar.<br></p>
+
+<p>A researcher is interested in finding out how perceptions of facial symmetry influence ratings of attractiveness. She alters a photo of a man and woman to create two images - one depicts their faces as having high symmetrical features, while the other depicts their faces as having low symmetrical features. She shows the pictures to 400 undergraduates and asks them to rate the attractiveness of the individuals in the photos on a scale of 1 to 10, with 1 indicating that the faces are not attractive and 10 indicating that faces are highly attractive. Table 1 outlines the mean attractiveness ratings for the images.<br></p>
+
+<b>Table 1</b><span id="figure">Experimental setup for Dr. Sperling</span>
+<div id="table">
+<img src="file:///home/george/MCAT%20Coding/gestaltTable.png"><br></div>
+
+<p>A researcher is interested in finding out how perceptions of facial symmetry influence ratings of attractiveness. She alters a photo of a man and woman to create two images - one depicts their faces as having high symmetrical features, while the other depicts their faces as having low symmetrical features. She shows the pictures to 400 undergraduates and asks them to rate the attractiveness of the individuals in the photos on a scale of 1 to 10, with 1 indicating that the faces are not attractive and 10 indicating that faces are highly attractive. Table 1 outlines the mean attractiveness ratings for the images.</p>

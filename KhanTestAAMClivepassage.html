@@ -132,11 +132,11 @@ div#grayBottom img{
 </style>
 
 <script>
-var position = 0
+var position = 0;
 var correct=0;
 var questions = [
 	[
-	/*Question 1*/
+	/*Question*/
 	"Why did Dr. Sterling use a tone to indicate the line of the row he wanted participants to recite?", 
 	/*A*/
 	"Asking verbally would take longer than iconic memory lasts",
@@ -148,16 +148,58 @@ var questions = [
 	"Using an audible cue helped trigger echoic memory", 
 	/*Answer*/
 	"A"],
-	[/*Question 2*/"Which is the best test of echoic memory?","Asking participants to provide the next line in a well-known song","Asking participants to summarize a story that was read to them", "Asking participants to identify whether two tones are identical", "Asking participants to sing the first line of their favorite song", "C"],
-	[/*Question 3*/"Which of the following explains why we see movement in a flip-book or stop-motion animation?", "Iconic memory","Central executive", "Echoic memory", "Visuospatial sketchpad", "A"],
-	[/*Question 4*/"If you drive by a stop sign and then try to recall it several minutes later, which are you using?", "Echoic memory, then the phonological loop","Echoic memory, then the visuospatial sketchpad", "Iconic memory, then the visuospatial sketchpad", "Iconic memory, then the phonological loop", "D"],
-	[/*Question 5*/"Which of the following is a technique used to increase the amount of information stored in working memory?","Semantic Networking","Imagery", "Self-referencing","Chunking","D"]
-	
-	//[/*Question 6*/"Which of the following accurately describes the Gestalt Law of Continuity?","Lines are seen as following the most discontinuous path.","Lines following the roughest path are naturally recognized.", "Lines are subjective mental constructs that serve no real world purpose.", "Lines are seen as following the smoothest path.", "D"],
-	//[/*Question 7*/"Which of the following is an example of bottom-up processing?", "Trying to identify a suspect in a police line-up.","Seeing a novel object for the first time.", "Looking for your keys.", "Inferring that a car is driving down the street based on the sound it makes without actually seeing it.", "B"],
-	//[/*Question 8*/"From a biological perspective, differences in perception are caused by differences in physiological features. If an individual lacked sensory adaptation, which of the following would be observed upon exposure to light?", "No constriction of the pupil.","Decrease in sensitivity of cones to light.", "Constriction of the pupil.", "Decrease in sensitivity of rods to light.", "A"],
-	//[/*Question 9*/"Which of the following is not a Gestalt principle?","The law of pragnanz","The law of equality", "The law of similarity","The law of proximity","B"]
-	//[/*Question 10*/'What type of variable is "attractiveness" in this study?',"Independent variable","Dependent variable", "Control variable","Confounding variable","B"]
+	[
+	/*Question*/
+	"Which is the best test of echoic memory?", 
+	/*A*/
+	"Asking participants to provide the next line in a well-known song",
+	/*B*/
+	"Asking participants to summarize a story that was read to them", 
+	/*C*/
+	"Asking participants to identify whether two tones are identical",  
+	/*D*/
+	"Asking participants to sing the first line of their favorite song", 
+	/*Answer*/
+	"C"],
+	[
+	/*Question*/
+	"Which of the following explains why we see movement in a flip-book or stop-motion animation?", 
+	/*A*/
+	"Iconic memory",
+	/*B*/
+	"Central executive", 
+	/*C*/
+	"Echoic memory",  
+	/*D*/
+	"Visuospatial sketchpad", 
+	/*Answer*/
+	"A"],
+	[
+	/*Question*/
+	"If you drive by a stop sign and then try to recall it several minutes later, which are you using?", 
+	/*A*/
+	"Echoic memory, then the phonological loop",
+	/*B*/
+	"Echoic memory, then the visuospatial sketchpad", 
+	/*C*/
+	"Iconic memory, then the visuospatial sketchpad",  
+	/*D*/
+	"Iconic memory, then the phonological loop", 
+	/*Answer*/
+	"D"],
+	[
+	/*Question*/
+	"Which of the following is a technique used to increase the amount of information stored in working memory?", 
+	/*A*/
+	"Semantic Networking",
+	/*B*/
+	"Imagery", 
+	/*C*/
+	"Self-referencing",  
+	/*D*/
+	"Chunking", 
+	/*Answer*/
+	"D"]
 ];
 
 var passagePosition = 0;
@@ -167,25 +209,36 @@ var passageBank = [
 	'<p>In 1960, Dr. George Sperling asked participants to recall a 4x3 group of letters flashed on a screen for less than a second. When instructed to recall as many letters as possible, most participants could only name the first four or five letters.</p><p>Dr. Sperling then asked another group to name only one of the rows. After they saw the image flash, he would randomly sound one of three tones. Sounding a high-frequency tone indicated that the participant should give the first line of letters; a medium-frequency tone indicated the middle row; and a low-frequency tone asked for the last row. If the tone was broadcast immediately after the image was flashed, the majority of subjects recalled all four letters. This marked the discovery of iconic memory, the visual form of sensory memory. Audible sensory memory (also known as echoic memory) lasts for several seconds.</p><div id="figure"><img src="https://ka-perseus-images.s3.amazonaws.com/a7d4238a28e6eef5321d3f6278fb17ce5a9461cf.png"></div><b>Figure 1</b><span id="figure">Experimental setup for Dr. Sperling</span><p>Sensory memory is constantly processing enormous amounts of information from the world around you. What you pay attention to gets passed into working memory. This stage can be described in three major sections – the visuospatial sketchpad, the phonological loop, and the central executive. The sketchpad stores visual information, like a photograph, while the loop deals with words and numbers. The job of coordinating the two falls to the central executive – connecting an address you hear with a map that you see, for example.</p>'],
 	[
 	"Passage 2",
-	'<p>Our ability to perceive the world around us is based on the fact that we are constantly making inferences about the various stimuli that we are exposed to. These inferences allow us to notice meaningful patterns and pay attention to novel stimuli in order to enhance our mental representations of the world. <i>Gestalt psychology</i> is one school of thought that seeks to understand perceptual organization, and operates from the viewpoint that human beings perceive phenomenon as whole, grouped parts, rather than perceiving individual features. <i>Gestalt theory</i>, when applied to perceptions of physical facial attractiveness, would suggest that ratings of the attractiveness of a person’s face would be based on an evaluation of the grouped, collective features of the whole face, rather than on distinct evaluations of specific parts of their face (like their nose shape, eye color, or lips). From this perspective a person with symmetrical facial traits might be evaluated as more attractive than someone with asymmetrical traits, because their face, when evaluated as a whole, appears to be more proportional and similar.</p><p>A researcher is interested in finding out how perceptions of facial symmetry influence ratings of attractiveness. She alters a photo of a man and woman to create two images - one depicts their faces as having high symmetrical features, while the other depicts their faces as having low symmetrical features. She shows the pictures to 400 undergraduates and asks them to rate the attractiveness of the individuals in the photos on a scale of 1 to 10, with 1 indicating that the faces are not attractive and 10 indicating that faces are highly attractive. Table 1 outlines the mean attractiveness ratings for the images.</p><b>Table 1</b><span id="figure">Experimental setup for Dr. Sperling</span><div id="table"><img src="img/gestaltTable.png"></div>']
+	'<p>Our ability to perceive the world around us is based on the fact that we are constantly making inferences about the various stimuli that we are exposed to. These inferences allow us to notice meaningful patterns and pay attention to novel stimuli in order to enhance our mental representations of the world. Gestalt psychology is one school of thought that seeks to understand perceptual organization, and operates from the viewpoint that human beings perceive phenomenon as whole, grouped parts, rather than perceiving individual features. Gestalt theory, when applied to perceptions of physical facial attractiveness, would suggest that ratings of the attractiveness of a person’s face would be based on an evaluation of the grouped, collective features of the whole face, rather than on distinct evaluations of specific parts of their face (like their nose shape, eye color, or lips). From this perspective a person with symmetrical facial traits might be evaluated as more attractive than someone with asymmetrical traits, because their face, when evaluated as a whole, appears to be more proportional and similar.</p><p>A researcher is interested in finding out how perceptions of facial symmetry influence ratings of attractiveness. She alters a photo of a man and woman to create two images - one depicts their faces as having high symmetrical features, while the other depicts their faces as having low symmetrical features. She shows the pictures to 400 undergraduates and asks them to rate the attractiveness of the individuals in the photos on a scale of 1 to 10, with 1 indicating that the faces are not attractive and 10 indicating that faces are highly attractive. Table 1 outlines the mean attractiveness ratings for the images.</p><b>Table 1</b><span id="figure">Experimental setup for Dr. Sperling</span><div id="table"><img src="file:///home/george/MCAT%20Coding/gestaltTable.png"></div><p>A researcher is interested in finding out how perceptions of facial symmetry influence ratings of attractiveness. She alters a photo of a man and woman to create two images - one depicts their faces as having high symmetrical features, while the other depicts their faces as having low symmetrical features. She shows the pictures to 400 undergraduates and asks them to rate the attractiveness of the individuals in the photos on a scale of 1 to 10, with 1 indicating that the faces are not attractive and 10 indicating that faces are highly attractive. Table 1 outlines the mean attractiveness ratings for the images.</p>']
 ];
 
 function _(x) {
 	return document.getElementById(x);
 }
 
+/*Put a new passage up on the left side of the screen*/
+
 function renderPassage(){
 	passage = _("passage");
-	_("passageNumber").innerHTML = passageBank[passagePosition][0] + " (Questions " + (position+1) +"-"+ (position+questions.length) +")";
-	passage.innerHTML = passageBank[passagePosition][1];
+	if(position >= questions.length) {
+		passagePosition++;
+		_("passageNumber").innerHTML = passageBank[passagePosition][0] + " (Questions " + (position+1) +"-"+ (position+questions.length) +")";
+		passage.innerHTML = passageBank[passagePosition][1];
+	}
+	}
+	else {
+		_("passageNumber").innerHTML = passageBank[passagePosition][0] + " (Questions " + (position+1) +"-"+ (position+questions.length) +")";
+		passage.innerHTML = passageBank[passagePosition][1];
+	}
 }
+
+/*Put up a new question on the right side of the screen*/
 
 function renderQuestion(){
 	prompt = _("prompt");
 	if(position >= questions.length) {
-		passagePosition++;
-		renderPassage();
 		prompt.innerHTML = "<h2>You got "+correct+" of " +questions.length+" questions correct</h2>";
+		correct = 0;
 		return false
 	}
 	_("testStatus").innerHTML = "Question " + (position+1)+" of "+questions.length;
@@ -222,6 +275,7 @@ Corresponds to the previous button in the bottom left.*/
 function previous() {
 	position--;
 	renderQuestion();
+	renderPassage();
 }
 
 /*Goes to the next question
@@ -229,10 +283,12 @@ Corresponds to the next button in the bottom right.*/
 function next() {
 	position++;
 	renderQuestion();
+	renderPassage();
 }
 
-window.addEventListener("load", renderPassage, false);
 window.addEventListener("load", renderQuestion, false);
+window.addEventListener("load", renderPassage, false);
+
 
 </script>
 </head>
@@ -243,22 +299,28 @@ window.addEventListener("load", renderQuestion, false);
 
 <!--Main left-->
 <div id="left">
+
 <div id="passageNumber"></div>
 <div id="passage"></div>
+
 </div>
 
 <!--Main right-->
 <div id="test">
+
 <div id="questionBar"></div>
 <div id="prompt"></div>
+
 </div>
 
-
+<!--Bottom bar-->
 <div id="grayBottom">
+
 <div id="previous"><img onClick="previous()" src="img/previous.gif"></div>
 <div id="mark"><img src="img/mark.gif"></div>
 <div id="review"><img src="img/review.gif"></div>
 <div id="next"><img onClick="next()" src="img/next.gif"></div>
+
 </div>
 </body>
 </html>

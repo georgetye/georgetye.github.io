@@ -1,0 +1,238 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+html{
+	overflow-y: hidden;
+}
+
+html, body {
+	margin:0;
+	padding:0;
+}
+
+div#purpleBar{
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(98, 40, 146);
+}
+
+div#grayHelm{
+    left: 0px;
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(77, 76, 77);
+    /*font properties*/
+    color: #fff;
+	font-family: "Times New Roman";
+}
+
+div#testStatus{
+	display: inline-block;
+	position: relative;
+	top: -15%;
+	width: 10%;
+	margin-left: 2vh;
+	font-size: 16px;
+}
+
+div#nameBox{
+	display: inline-block;
+	margin-left: 19%;
+	margin-top: 0.5vh;
+	width: 40%;
+	text-align: center;
+	font-size: 18px;
+}
+
+span#mcat{
+	font-size: 16px;
+}
+
+div#left{
+	float: left;
+	padding: 1%;
+	width: 48%;
+	height: 75vh;
+	overflow-y: auto;
+}
+
+div#passage p {
+    text-indent: 4vh;
+    line-height: 1.25;
+    font-size: 16px;
+}
+
+div#figure{
+	text-align: center;
+	width: 100%;
+}
+
+div#table{
+	text-align: center;
+	width: 100%;
+	margin-bottom: 2vh;
+}
+
+span#figure {
+	margin-left: 5vh;
+	display: inline-block;
+	margin-bottom: 2vh;
+}
+
+div#passageNumberOG{
+	text-indent: 0px;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 5vh;
+}
+
+div#questionBar{
+	background-color: rgb(77, 76, 77);
+	 /*font properties*/
+    color: #fff;
+	font-family: "Times New Roman";
+	font-size: 18px;
+	padding: 0.5% 1%;
+}
+
+div#solutionColumn{
+	text-align: center;
+	width: 8%;
+	height: 72vh;
+	display: inline-block;
+	float: left;
+	font-size: 12px;
+}
+
+div#solutionColumn img{
+	padding-top: 5vh;
+	cursor:pointer;
+}
+
+div#solution{
+	padding-top: 3vh;
+	color: blue;
+}
+
+div#test{
+	float: right;
+	padding: 1%;
+	width: 48%;
+}
+
+div#grayBottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 7.5vh;
+    background-color: #4d4c4d;
+
+}
+
+div#grayBottom div{
+	display: inline-block;
+	margin-left: 7.4%;
+	margin-right: 7.4%;
+	margin-top:0.6%;
+}
+
+div#grayBottom div#previous{
+	margin-left: 8.5%;
+}
+
+div#grayBottom img{
+	cursor:pointer;
+}
+
+
+div#reviewPage {
+	text-align: center;
+	padding-left: 2vh;
+	padding-right: 2vh;
+	font-size: 17px;
+}
+
+div#symbolsKeyBox div{
+	padding-top: 1vh;
+	font-size: 16px;
+	display: inline-block;
+	width: 40vh;
+}
+
+div#markedQuestion{
+	text-align: left;
+}
+
+div#incompleteQuestion{
+	text-align: center;
+}
+
+div#completedQuestion{
+	text-align: right;
+}
+
+div#table {
+	text-align: center;
+	background-color: red;
+}
+
+.boxer {
+   display: inline-block;
+   border-collapse: collapse;
+   background-color: red;
+}
+ 
+.boxer .box-row {
+   display: table-row;
+}
+ 
+.boxer .box {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	border: 1px solid black;
+}
+
+
+</style>
+
+<script>
+</script>
+<body>
+
+<div id ="purpleBar"></div>
+<div id ="grayHelm"><div id="testStatus"></div><div id="nameBox"><a id="name" onClick="name()">Francis Collins</a><br><span id='mcat'>MEDICAL COLLEGE ADMISSION TEST</span></div></div>
+
+<div id="main">
+<div id="reviewPage">
+<br>The table below is a summary of your marked, incomplete, and completed questions for this section. To return to a specific question, double-click on the question number. You may also click one of the Review buttons at the bottom of the screen.<br><br>Symbols Key
+<div id="symbolsKeyBox">
+<div id="markedQuestion"><img src="img/markedQuestion.gif">= Marked Question</div>
+<div id="incompleteQuestion"><img src="img/incompleteQuestion.gif">= Incomplete Question</div>
+<div id="completedQuestion"><img src="img/completedQuestion.gif">= Completed Question</div>
+</div>
+<div id = "table">
+	<div class="boxer">
+		<div class="box-row">
+			<div class="box">hi</div>
+			<div class="box">ho</div>
+			<div class="box">here</div>
+			<div class="box">we go</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+<div id="grayBottom">
+<div id="previous"><img onClick='previous()' src='img/previous.gif'></div>
+<div id="mark"><img src="img/mark.gif"></div>
+<div id="review"><img onClick="review()" src="img/review.gif"></div>
+<div id="next"><img onClick="next()" src="img/next.gif"></div>
+</div>
+
+</body>
+</html>

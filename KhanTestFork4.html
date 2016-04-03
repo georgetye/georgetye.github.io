@@ -379,7 +379,7 @@ function review() {
 	}
 	
 	else {
-		main.innerHTML = '<div id="main"><div id="left"><div id="passageNumberOG"></div><div id="passage"></div></div><div id="test"><div id="questionBar"></div><div id ="solutionColumn"><img onClick ="displaySolution()" src="img/solution.gif"><br>Solution</div><div id="prompt"></div><div id="solution"></div></div></div>';
+		main.innerHTML = '<div id="main"><div id="left"><div id="passageNumberOG"></div><div id="passage"></div></div><div id="right"><div id="questionBar"></div><div id ="solutionColumn"><img onClick ="displaySolution()" src="img/solution.gif"><br>Solution</div><div id="prompt"></div><div id="solution"></div></div></div>';
 		reviewClicked = 0;
 		renderPassage();
 		renderQuestion();
